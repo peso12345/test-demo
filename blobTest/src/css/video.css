@@ -1,0 +1,160 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+#apps {
+    height: 100vh;
+    background: url(/public/snow.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.filter {
+    /* filter: opacity(0.5); 透明度 */
+    /* filter: blur(2px);  高斯模糊 */
+    /* filter: invert(0.9); 反色 */
+    /* filter: saturate(5); 饱和度 */
+    /* filter: grayscale(0.2); 灰度 */
+    /* filter: sepia(.5); 褐色 */
+    /* 使用style上定义的属性,通过js更改style上的属性的值，也可以写css动画实现*/
+    filter: hue-rotate(var(--filter-rotate));
+    /* filter: brightness(2); 亮度 */
+    /* filter: contrast(2.5); 对比度 */
+    /* filter: drop-shadow(20px 20px 10px 20px #000); 属性类似于box-shadow，给图片加阴影。(无效？) */
+}
+
+.button {
+    --btn-h: 80px;
+    --btn-bg-blue: skyblue;
+    height: var(--btn-h);
+    width: var(--btn-h);
+    background: var(--btn-bg-blue);
+}
+
+.text-color-blue {
+    color: skyblue;
+}
+
+.flex {
+    display: flex;
+}
+
+.point {
+    cursor: pointer;
+}
+
+.hover:hover {
+    box-shadow: 20px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.player {
+    position: relative;
+}
+
+
+/*多媒体标题*/
+figcaption {
+    text-align: center;
+    line-height: 150px;
+    font-family: "Microsoft Yahei";
+    font-size: 24px;
+    color: #fff;
+}
+
+/* 播放器*/
+.palyer {
+    /* width: 800px;
+    height: 800*(16/1)px; */
+    margin: 10px auto;
+    border: 1px solid #000;
+    background: url(images/loading.gif) center no-repeat #000;
+    background-size: auto 100%;
+    position: relative;
+    border-radius: 20px;
+
+    /* display: flex;
+    justify-content: space-between; */
+    color: #fff;
+}
+
+.palyer video {
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+    /*display: none;*/
+}
+
+/* 控制条*/
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* height: 100%; */
+    font-size: 18px;
+    width: 700px;
+
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 0, 0.3);
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 15px;
+
+    color: #fff;
+
+    transition: all 1.5s;
+    opacity: 1;
+}
+
+.player a {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+/*开关*/
+.switch {}
+
+/*进度条*/
+.progress {
+    background: #fff;
+    width: 50%;
+    height: 10px;
+    border-radius: 20px;
+}
+
+/* 当前进度*/
+.curr-progress {
+    background: rgb(189, 186, 186);
+    height: 10px;
+    border-radius: 20px;
+    width: 0%;
+
+}
+
+/* 时间模块*/
+.time {}
+
+/*全屏*/
+.extend {}

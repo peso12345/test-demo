@@ -1,0 +1,102 @@
+<!--
+ * @Author: peso12345
+ * @LastEditors: peso12345
+ * @Date: 2023-01-24 13:05:34
+ * @Version: 0.0.1
+ * @Description: 描述
+-->
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <link rel='icon' href='/favicon.ico'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <!-- <meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate' />
+<meta http-equiv='Pragma' content='no-cache' />
+<meta http-equiv='Expires' content='0' /> -->
+    <meta name='description' content='blob文件下载' />
+    <meta name='keywords' content='blob,下载' />
+    <meta name='robots' content='index,follow' />
+    <!-- ⑦、revisit-after:搜索引擎爬虫重访时间 -->
+    <meta name='revisit-after' content='one week'>
+    <!-- no-referrer:所有请求不发送 referrer。 -->
+    <!-- <meta name='referrer' content='no-referrer' /> -->
+    <title>VUE3在html中的使用及blob文件通过a标签自定义名称下载</title>
+    <style>
+        html,
+        body {
+            /* margin: 0;
+            padding: 0; */
+        }
+    </style>
+</head>
+
+<body>
+    <div id='app'>
+        <!-- marquee标签已在html5废弃，但各大浏览器支持情况良好 -->
+        <marquee ref="marqueeRef" direction="down" scrollamount="30" scrolldelay="1000" behavior="alternate"
+            bgcolor="skyblue" width="600" height="50" vspace="10" hspace="10">{{gogogo}}</marquee>
+        <h1>URL.createObjectURL、Blob<br />实现保存文件</h1>
+        <button ref="btnRef" class="btn" type="button">下载</button>
+        <div>{{gogogo}}</div>
+        <select name="" id="" multiple size="3">
+            <option value="1">黄</option>
+            <option selected value="2">橙</option>
+            <option selected value="3">红</option>
+            <option value="4">绿</option>
+        </select>
+        <br />
+
+        <!-- aria-readonly aria-开头的属性是无障碍阅读的标识 -->
+        <textarea name="textInfo" id="textInfo" cols="30" rows="4" aria-readonly="">1\ersguihreughuoeri.
+2\egijeorijgaioerjgi</textarea>
+
+        <form action="" method="post">
+            <fieldset>
+                <legend>账号信息</legend>
+                姓名：<input type="text" value="呵呵">逗比<br>
+                密码：<input ref="inputpassword" type="password" value="pwd" size="50"><button type="button" @click="buttons">{{showPassword?'显示':'隐藏'}}密码</button><br>
+            </fieldset>
+            <legend>其他信息</legend>
+            性别：<input type="radio" name="gender" id="male" value="male" checked><label for="male">男</label>&nbsp;&nbsp;
+            <input type="radio" name="gender" id="female" value="female"><label for="female">女</label><br>
+            爱好：<input type="checkbox" name="love" id="eat" value="ear"><label for="eat">吃饭</label>
+            <input type="checkbox" name="love" id="sleep" value="sleep"><label for="sleep">睡觉</label>
+            <input type="checkbox" name="love" id="bat" value="bat"><label for="bat">打豆豆</label>
+            <hr>23hr
+            <hr>
+            <form action="demo-form.php" method="get">
+                <input list="browsers2" name="list">
+                <datalist id="browsers2">
+                    <option value="本科">
+                    <option value="本来">
+                    <option value="一本">
+                    <option value="iy一本">
+                    <option value="iyre一本">
+                </datalist>
+                <input type="submit">
+            </form>
+            <form action="demo-form.php" method="get">
+                <input list="browsers" name="browser">
+                <datalist id="browsers">
+                    <option value="Internet Explorer">
+                    <option value="Firefox">
+                    <option value="Chrome">
+                    <option value="Opera">
+                    <option value="Safari">
+                </datalist>
+                <input type="submit">
+            </form>
+            <hr>
+
+        </form>
+    </div>
+    <!-- 引入es版vue -->
+    <!-- <script type="module">
+        import { createApp,ref } from '/vue/vue.esm.js';
+    </script> -->
+    <script type='module' src='/src/js/main.js'></script>
+</body>
+
+</html>
