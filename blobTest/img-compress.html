@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <link rel='icon' href='/favicon.ico'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <!-- <meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate' />
+<meta http-equiv='Pragma' content='no-cache' />
+<meta http-equiv='Expires' content='0' /> -->
+    <meta name='description' content='图片压缩' />
+    <meta name='keywords' content='图片,压缩' />
+    <meta name='robots' content='index,follow' />
+    <!-- ⑦、revisit-after:搜索引擎爬虫重访时间 -->
+    <meta name='revisit-after' content='one week'>
+    <!-- no-referrer:所有请求不发送 referrer。 -->
+    <!-- <meta name='referrer' content='no-referrer' /> -->
+    <title>图片压缩</title>
+</head>
+
+<body>
+    <div id='app' class="flex flex-col justify-center align-center">
+        <h1>图片压缩</h1>
+        <div class="padding-30px">仅仅用于个人测试使用，如有侵权，邮件联系huang-gw@outlook.com</div>
+        <div id="dropbox" class="load margin-30px flex flex-col justify-center align-center">
+            <input style="display:none;" id="myfiles" ref="filesRef" type="file" :accept="types" @change="handleFiles"
+                multiple />
+            <!-- <label for="myfiles">
+                <div>上传图片</div>
+            </label> -->
+            <dialog :open="showDialog" @dblclick="this.showDialog = false">
+                <p>网页还没加载完成，请稍后！</p><em>双击关闭</em>
+            </dialog>
+            <button  id="fileBtn" type="button" @click="selectFiles">
+                <div>
+                    <p>上传文件<br />或<br />拖动到此</p>
+                </div>
+            </button>
+
+        </div>
+        <div class="flex flex-col justify-around">
+            <p>
+                选择了{{this.data.length}}张图片,共{{(this.size/1024).toFixed(2)}}kb
+            </p>
+            <!-- <img src="" alt=""> -->
+            <div ref="thumbnailRef" class="thumbnailBox flex flex-wrap justify-around"></div>
+        </div>
+        <div class="demo flex justify-around">
+            <div>
+                <div class="padding-30px">测试的图片</div>
+                <img src="/public/snow.jpg" alt="测试的图片">
+            </div>
+            <span class="line"></span>
+            <div>
+                <div class="padding-30px">生成的图片</div>
+                <img src="/public/snow.jpg" alt="生成的图片">
+            </div>
+        </div>
+        <div class="circle"></div>
+        <div  class="linear-gradient"></div>
+    </div>
+    <script type='module' src='/src/js/img-compress.js'></script>
+    <link rel="stylesheet" href="/src/css/img-compress.css">
+</body>
+
+</html>

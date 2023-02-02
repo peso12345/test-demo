@@ -1,0 +1,146 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(to right top, rgba(0, 0, 0, 0.6) 50%, transparent 0) no-repeat 100% 0 / 3em 3em,
+    linear-gradient(225deg, transparent 2.1em, rgba(85, 136, 170, 0.767) 0);
+}
+
+#app {
+    width: var(--max-width);
+    margin:0 10px;
+    /* height: 100vh; */
+    /* font-family: 'PingFangSC-Regular', 'helvetica neue', tahoma, 'microsoft yahei', arial, sans-serif; */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.flex {
+    display: flex;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-around {
+    justify-content: space-around;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.padding-30px {
+    padding: 24px;
+}
+
+.margin-30px {
+    margin: 24px;
+}
+
+
+#app img {
+    width: var(--img-height);
+    height: var(--img-height);
+    display: block;
+    cursor: pointer;
+
+    /* vertical-align: middle; */
+}
+
+#app .demo {
+    height: var(--img-height);
+    width: 80%;
+}
+
+#app .demo div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.load {
+    width: calc(var(--img-height) * 2);
+    height: calc(var(--img-height) * 6 / 19);
+
+    background: rgba(180, 255, 211, 0.63);
+    border: 1px dashed #000;
+}
+
+.circle {
+    width: var(--img-height);
+    height: var(--img-height);
+
+    border: 1px solid #000;
+    /* outline:1px solid #000; */
+
+    border-radius: 100% 0 0 100% / 100% 100% 0 0;
+}
+
+.linear-gradient {
+    width: var(--img-height);
+    height: var(--img-height);
+    background: linear-gradient(to right top, rgba(0, 0, 0, 0.6) 50%, transparent 0) no-repeat 100% 0 / 3em 3em,
+        linear-gradient(225deg, transparent 2.1em, #58a 0);
+}
+
+#app dialog {
+    user-select: none;
+}
+
+#fileBtn {
+    width: calc(var(--btn-width) - 15px);
+    height: var(--img-169height);
+    height: 85%;
+    border: 1px dashed #555;
+    user-select: none;
+    display: block;
+    cursor: pointer;
+}
+
+.line {
+    padding: 4px;
+}
+
+#app .img-thumbnail {
+    display: block;
+    object-fit: contain;
+    height: var(--thumbnail-width);
+    width: var(--thumbnail-width);
+}
+
+.thumbnailBox {
+    max-width: var(--max-width);
+}
+
+:root {
+    --max-width: 1280px;
+    --img-height: 300px;
+    --thumbnail-width: 120px;
+    --img-169height: calc(var(--img-height) * 6 / 19);
+    --btn-width: calc(var(--img-height) * 2);
+}
