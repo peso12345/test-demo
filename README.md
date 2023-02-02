@@ -9,3 +9,7 @@ blobTest/bolob.html
 ```
 blobTest/video.html // 需修改video的src为线上、本地地址
 ```
+### 图片压缩
+```
+blobTest/img-compress.html // 未完成
+```
